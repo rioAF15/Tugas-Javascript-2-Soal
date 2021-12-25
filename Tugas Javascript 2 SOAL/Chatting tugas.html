@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas Chatting Javascript - Rio Afandi Sanjaya Gulo</title>
+</head>
+<body style="background: rgb(149, 221, 243);">
+   <textarea name="" id="chat" cols="30" rows="10"></textarea>
+   
+
+
+   <input  type="text" id="input">
+   <button onclick="kirim()">Kirim</button>
+
+
+  <script>
+    let message = [];
+    let chat = document.getElementById("chat");
+    let input = document.getElementById("input");
+    let end = 0;
+    function kirim(){
+      message.push(input.value)
+      for (let index = 0; index <= 1; index++) {
+         end += 1
+         document.getElementById("chat").innerHTML = message.join('\n'); 
+         input.value = '' 
+      }
+    }
+  </script>
+</body>
+</html>
